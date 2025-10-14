@@ -1,0 +1,520 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("../images/gymback.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+
+.site-header {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.gym-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.main-nav a:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+}
+
+
+.hero {
+  text-align: center;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 80px 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 5px;
+}
+
+.btn.primary {
+  background: #ffcc00;
+  color: black;
+  border: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background: white;
+  color: black;
+}
+
+
+.about {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 80%;
+  margin: 50px auto;
+  transition: transform 0.3s ease;
+}
+
+.about:hover {
+  transform: scale(1.01);
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffcc00;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+.features {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 60px 0;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.feature img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.feature img:hover {
+  transform: scale(1.05);
+}
+
+.feature h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  margin-top: 40px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    width: 90%;
+    margin-top: 80px;
+    padding: 40px 10px;
+  }
+
+  .gym-name {
+    font-size: 1.5rem;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+.plans {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 85%;
+  margin: 60px auto;
+}
+
+.plans h1 {
+  color: #ffcc00;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.plans .intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.plans-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.plan {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.plan h2 {
+  color: #ffcc00;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.plan li {
+  margin-bottom: 10px;
+}
+
+.plan .btn {
+  margin-top: 15px;
+}
+
+
+.plan.highlight {
+  background: rgba(255, 204, 0, 0.2);
+  border: 2px solid #ffcc00;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .plans-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+.trainers {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  width: 85%;
+  margin: 60px auto;
+  border-radius: 10px;
+}
+
+.trainers h1 {
+  color: #ffcc00;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.trainers .intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.trainer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.trainer-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trainer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.trainer-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.trainer-card h2 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.trainer-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .trainer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trainer-card {
+    width: 80%;
+  }
+}
+
+
+
+.schedule {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  width: 85%;
+  margin: 60px auto;
+  border-radius: 10px;
+}
+
+.schedule h1 {
+  color: #ffcc00;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.schedule .intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.schedule-table th {
+  background: rgba(255, 204, 0, 0.3);
+  color: black;
+  font-weight: bold;
+}
+
+.schedule-table tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .schedule-table th, .schedule-table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+
+
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  width: 85%;
+  margin: 60px auto;
+  border-radius: 10px;
+}
+
+.contact h1 {
+  color: #ffcc00;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contact .intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #ffcc00;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+button.btn.primary {
+  width: 100%;
+  background-color: #ffcc00;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button.btn.primary:hover {
+  background-color: #e6b800;
+}
